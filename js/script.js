@@ -47,7 +47,7 @@ function checkemail() {
 var startX;
 var startY;
 var dist;
-var threshholdist = 150;
+var threshholdist = 60;
 var ellapsedtime;
 var time;
 var allowedtime = 200;
