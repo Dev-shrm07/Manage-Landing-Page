@@ -3,7 +3,7 @@ var arrid = ["avatar1", "avatar2", "avatar3", "avatar4"];
 var crid = ["cr-1", "cr-2", "cr-3", "cr-4"];
 var count = 0;
 
-var touchsection = document.getElementById("section3");
+var touchsection = document.getElementById("wholebox");
 
 function showmenu() {
   document.getElementById("list").style.display = "flex";
@@ -80,7 +80,7 @@ touchsection.addEventListener(
     dist = touchobj.pageX - startX;
     ellapsedtime = new Date().getTime - time;
     var swipecheck = (dist <= 0);
-    if ((Math.abs(dist) >= threshholdist)) {
+    if ((Math.abs(dist) >= threshholdist) && Math.abs(touchobj.pageY - startY) <= 100) {
       swipebox(swipecheck);
     }
     e.preventDefault();
